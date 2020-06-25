@@ -25,9 +25,10 @@ class CategoryTest {
 
     @Test
     public void getDescription() throws Exception {
-    }
+        String description = "Masala";
 
-    @Test
-    public void getRecipes() throws Exception {
+        category.setDescription(description);
+
+        assertEquals(description, category.getDescription());
     }
 }
