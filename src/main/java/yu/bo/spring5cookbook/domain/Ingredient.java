@@ -1,4 +1,4 @@
-package yu.bo.spring5cookbook.model;
+package yu.bo.spring5cookbook.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
