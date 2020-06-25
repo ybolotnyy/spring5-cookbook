@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import yu.bo.spring5cookbook.model.UnitOfMeasure;
+import yu.bo.spring5cookbook.model.Category;
 
 import java.util.Optional;
 
@@ -17,25 +17,25 @@ import static org.junit.Assert.*;
 public class UnitOfMeasureRepositoryTest {
 
     @Autowired
-    UnitOfMeasureRepository unitOfMeasureRepository;
+    CategoryRepository categoryRepository;
 
     @Before
     public void setUp() throws Exception {
     }
 
     @Test
-    public void findByDescription() throws Exception {
+    public void findCategoryByDescription() throws Exception {
 
-        Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Teaspoon");
+        Optional<Category> categoryOptional = categoryRepository.findByDescription("Ukrainian");
 
-        assertEquals("Teaspoon", uomOptional.get().getDescription());
+        assertEquals("Ukrainian", categoryOptional.get().getDescription());
     }
 
     @Test
-    public void findByDescriptionCup() throws Exception {
+    public void findCategoryByDescriptionIndian() throws Exception {
 
-        Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Cup");
+        Optional<Category> categoryOptional = categoryRepository.findByDescription("Indian");
 
-        assertEquals("Cup", uomOptional.get().getDescription());
+        assertEquals("Indian", categoryOptional.get().getDescription());
     }
 }
