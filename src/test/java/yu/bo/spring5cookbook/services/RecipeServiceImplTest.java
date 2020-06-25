@@ -29,18 +29,61 @@ public class RecipeServiceImplTest {
     }
 
     @Test
-    public void getRecipes() throws Exception {
+    public void addNewRecipe() throws Exception {
+
+        int initial_recipes_count = recipeService.getRecipes().size();
 
         Recipe recipe = new Recipe();
         HashSet receipesData = new HashSet();
+
         receipesData.add(recipe);
 
         when(recipeService.getRecipes()).thenReturn(receipesData);
 
-        Set<Recipe> recipes = recipeService.getRecipes();
+        int new_recipes_count = recipeService.getRecipes().size();
 
-        assertEquals(recipes.size(), 1);
-        verify(recipeRepository, times(1)).findAll();
+        assertEquals(new_recipes_count, initial_recipes_count + 1);
+        verify(recipeRepository, times(2)).findAll();
+    }
+
+
+    @Test
+    public void addThenDeleteRecipe() throws Exception {
+
+        int initial_recipes_count = recipeService.getRecipes().size();
+
+        Recipe recipe = new Recipe();
+        HashSet receipesData = new HashSet();
+
+        receipesData.add(recipe);
+        receipesData.remove(recipe);
+
+        when(recipeService.getRecipes()).thenReturn(receipesData);
+
+        int new_recipes_count = recipeService.getRecipes().size();
+
+        assertEquals(new_recipes_count, initial_recipes_count);
+    }
+
+
+    @Test
+    public void addMultipleRecipes() throws Exception {
+
+        int numberToAdd = 10;
+        int initial_recipes_count = recipeService.getRecipes().size();
+
+        HashSet receipesData = new HashSet();
+
+        // populate 10 new recipes
+        for (int i = 0; i < numberToAdd; i++) {
+            receipesData.add(new Recipe());
+        }
+
+        when(recipeService.getRecipes()).thenReturn(receipesData);
+
+        int new_recipes_count = recipeService.getRecipes().size();
+
+        assertEquals(new_recipes_count, initial_recipes_count + numberToAdd);
     }
 
 }
