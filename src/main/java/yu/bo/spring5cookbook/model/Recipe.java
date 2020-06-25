@@ -2,9 +2,6 @@ package yu.bo.spring5cookbook.model;
 
 import javax.persistence.*;
 
-/**
- * Created by jt on 6/13/17.
- */
 @Entity
 public class Recipe {
 
