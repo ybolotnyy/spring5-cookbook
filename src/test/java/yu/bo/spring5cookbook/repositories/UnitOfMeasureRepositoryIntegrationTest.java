@@ -24,7 +24,7 @@ public class UnitOfMeasureRepositoryIntegrationTest {
     }
 
     @Test
-    public void findByDescription() throws Exception {
+    public void findUOMByDescription() throws Exception {
 
         Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Pint");
 
@@ -32,7 +32,7 @@ public class UnitOfMeasureRepositoryIntegrationTest {
     }
 
     @Test
-    public void findByDescriptionCup() throws Exception {
+    public void findUOMByDescriptionCup() throws Exception {
 
         Optional<UnitOfMeasure> uomOptional = unitOfMeasureRepository.findByDescription("Cup");
 
