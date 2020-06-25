@@ -1,7 +1,7 @@
 package yu.bo.spring5cookbook.services;
 
 import org.springframework.stereotype.Service;
-import yu.bo.spring5cookbook.domain.Recipe;
+import yu.bo.spring5cookbook.model.Recipe;
 import yu.bo.spring5cookbook.repositories.RecipeRepository;
 
 import java.util.HashSet;

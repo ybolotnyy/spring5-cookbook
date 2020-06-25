@@ -3,7 +3,7 @@ package yu.bo.spring5cookbook.bootstrap;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-import yu.bo.spring5cookbook.domain.*;
+import yu.bo.spring5cookbook.model.*;
 import yu.bo.spring5cookbook.repositories.CategoryRepository;
 import yu.bo.spring5cookbook.repositories.RecipeRepository;
 import yu.bo.spring5cookbook.repositories.UnitOfMeasureRepository;

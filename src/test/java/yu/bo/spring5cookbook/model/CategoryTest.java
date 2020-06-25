@@ -1,4 +1,4 @@
-package yu.bo.spring5cookbook.domain;
+package yu.bo.spring5cookbook.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

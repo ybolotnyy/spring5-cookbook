@@ -1,7 +1,7 @@
 package yu.bo.spring5cookbook.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import yu.bo.spring5cookbook.domain.Category;
+import yu.bo.spring5cookbook.model.Category;
 
 import java.util.Optional;
 

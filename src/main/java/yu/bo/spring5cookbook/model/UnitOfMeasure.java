@@ -1,4 +1,4 @@
-package yu.bo.spring5cookbook.domain;
+package yu.bo.spring5cookbook.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

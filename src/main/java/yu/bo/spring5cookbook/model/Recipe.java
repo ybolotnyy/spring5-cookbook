@@ -1,4 +1,4 @@
-package yu.bo.spring5cookbook.domain;
+package yu.bo.spring5cookbook.model;
 
 import javax.persistence.*;
 import java.util.HashSet;

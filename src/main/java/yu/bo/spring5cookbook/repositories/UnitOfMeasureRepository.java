@@ -1,7 +1,7 @@
 package yu.bo.spring5cookbook.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import yu.bo.spring5cookbook.domain.UnitOfMeasure;
+import yu.bo.spring5cookbook.model.UnitOfMeasure;
 
 import java.util.Optional;
 

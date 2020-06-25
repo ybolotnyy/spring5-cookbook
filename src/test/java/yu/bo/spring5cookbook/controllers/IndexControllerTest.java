@@ -1,6 +1,6 @@
 package yu.bo.spring5cookbook.controllers;
 
-import yu.bo.spring5cookbook.domain.Recipe;
+import yu.bo.spring5cookbook.model.Recipe;
 import yu.bo.spring5cookbook.services.RecipeService;
 
 import org.junit.Before;
